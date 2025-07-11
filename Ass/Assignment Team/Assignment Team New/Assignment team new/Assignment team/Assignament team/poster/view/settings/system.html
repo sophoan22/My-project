@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Settings</title>
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Chart.js CDN -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../../assets/styles/layout.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div style="display: flex; align-items: center;">
+            <a href="../dashboard/dashboard.html" class="logo">
+                <img src="../../assets/img/log.jpg" alt="" width="50px">
+            </a>
+        </div>
+
+        <div class="header-right">
+            <a class="btn-border-red" style="text-decoration: none; " href="../dashboard/dashboard.html">Dashboard</a>
+            <div class="notification-icon">
+                <img src="../../assets/img/bell-removebg-preview.png" alt="" width="20px">
+                <div class="notification-badge"></div>
+            </div>
+            <div class="user-avatar">
+                <i> <img src="../../assets/img/ha.jpg" alt="" width="30px"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-menu">
+                <a href="../dashboard/dashboard.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/pcdiagram-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Dashboard</span>
+                </a>
+                <a href="../product/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/baycafe-removebg-preview.png" width="50px" alt="">
+
+                    </div>
+                    <span>Products</span>
+                </a>
+                <a href="../people/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/hed3-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>People</span>
+                </a>
+                <a href="../settings/index.html" class="menu-item active">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/sitingsmall-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Setting</span>
+                </a>
+                <a href="../reports/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/pdfhigh-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Reports</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Stats Cards -->
+
+            <h2>System Settings</h2>
+            <hr style="margin-top: 5px;margin-bottom: 30px;">
+            <!-- Charts and Products -->
+            <div class="card-container">
+                <div style="width: 100%;display: flex;gap: 15px;">
+                    <div class="w100">
+                        <div class="w100" style="margin-bottom: 15px;">
+                            <div class="mbm">
+                                <label>Default Currency</label>
+                            </div>
+                            <select class="selected-field w100" name="" id="">
+                                <option selected value="">US Dollar</option>
+                                <option value="">KH Real</option>
+                            </select>
+                        </div>
+                        <div class="w100" style="margin-bottom: 15px;">
+                            <div class="mbm">
+                                <label>Company Name</label>
+                            </div>
+                            <input class="input-field" value="Bee Coffee Shop" type="text">
+                        </div>
+                        <div class="w100" style="margin-bottom: 15px;">
+                            <div class="mbm">
+                                <label>Footer</label>
+                            </div>
+                            <input type="text" class="input-field" value="Stocky - Ultimate Inventory With POS">
+                        </div>
+                        <div class="w100" style="margin-bottom: 15px;">
+                            <div class="mbm">
+                                <label>Default Warehouse</label>
+                            </div>
+                            <select class="selected-field w100" name="" id="">
+                                <option selected value="">Default Warehouse</option>
+                                <option value="">Rich Warehouse</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="w100">
+                        <div class="w100" style="margin-bottom: 15px;">
+                            <div class="mbm">
+                                <label>Default Email</label>
+                            </div>
+                            <input value="admin@gmail.com" class="input-field" type="text">
+                        </div>
+                        <div class="w100" style="margin-bottom: 15px;">
+                            <div class="mbm">
+                                <label>Default Language</label>
+                            </div>
+                            <select class="selected-field w100" name="" id="">
+                                <option selected value="">English</option>
+                                <option value="">Khmer</option>
+                                <option value="">French</option>
+                            </select>
+                        </div>
+                        <div class="w100" style="margin-bottom: 15px;">
+                            <div class="mbm">
+                                <label>Default SMS Gateway</label>
+                            </div>
+                            <select class="selected-field w100" name="" id="">
+                                <option selected value="">twilio</option>
+                            </select>
+                        </div>
+                        <div class="w100" style="margin-bottom: 15px;">
+                            <div class="mbm">
+                                <label>Time Zone</label>
+                            </div>
+                            <select class="selected-field w100" name="timezone" id="timezone">
+                                <option value="">Select a time zone</option>
+                                <option value="UTC">UTC</option>
+                                <option value="Pacific/Midway">(UTC-11:00) Midway Island</option>
+                                <option value="America/Anchorage">(UTC-09:00) Alaska</option>
+                                <option value="America/Los_Angeles">(UTC-08:00) Pacific Time (US & Canada)</option>
+                                <option value="America/Denver">(UTC-07:00) Mountain Time (US & Canada)</option>
+                                <option value="America/Chicago">(UTC-06:00) Central Time (US & Canada)</option>
+                                <option value="America/New_York">(UTC-05:00) Eastern Time (US & Canada)</option>
+                                <option value="America/Sao_Paulo">(UTC-03:00) Brasília</option>
+                                <option value="Europe/London">(UTC+00:00) London</option>
+                                <option value="Europe/Paris">(UTC+01:00) Paris, Berlin</option>
+                                <option value="Europe/Istanbul">(UTC+03:00) Istanbul</option>
+                                <option value="Asia/Dubai">(UTC+04:00) Abu Dhabi, Dubai</option>
+                                <option value="Asia/Karachi">(UTC+05:00) Islamabad, Karachi</option>
+                                <option value="Asia/Dhaka">(UTC+06:00) Dhaka</option>
+                                <option selected value="Asia/Bangkok">(UTC+07:00) Bangkok, Jakarta, Hanoi</option>
+                                <option value="Asia/Phnom_Penh" selected>(UTC+07:00) Phnom Penh</option>
+                                <option value="Asia/Shanghai">(UTC+08:00) Beijing, Shanghai</option>
+                                <option value="Asia/Tokyo">(UTC+09:00) Tokyo, Osaka</option>
+                                <option value="Australia/Sydney">(UTC+10:00) Sydney</option>
+                                <option value="Pacific/Auckland">(UTC+12:00) Auckland</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <span> <input type="checkbox"> Invoice footer</span>
+                    <span style="margin-left: 30px;"><input type="checkbox"> Create Quotation with Stock</span>
+                </div>
+
+                <button class="btn-info-yy" style="margin-top: 30px;">
+                    <i class="fa-solid fa-check"></i> Submit
+                </button>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer" style="margin-top: 50px;">
+                <div class="footer-title">Assignment Restaurant Manager</div>
+                <div>© 2025 Developed by Henq Runbaab • All rights reserved • v1.0</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

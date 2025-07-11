@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Management</title>
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Chart.js CDN -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../../assets/styles/layout.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div style="display: flex; align-items: center;">
+            <a href="../dashboard/dashboard.html" class="logo">
+                <img src="../../assets/img/log.jpg" alt="" width="50px">
+            </a>
+        </div>
+
+        <div class="header-right">
+            <a class="btn-border-red" style="text-decoration: none; " href="../dashboard/dashboard.html">Dashboard</a>
+            <div class="notification-icon">
+                <img src="../../assets/img/bell-removebg-preview.png" alt="" width="20px">
+                <div class="notification-badge"></div>
+            </div>
+            <div class="user-avatar">
+                <i> <img src="../../assets/img/ha.jpg" alt="" width="30px"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-menu">
+                <a href="../dashboard/dashboard.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/pcdiagram-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Dashboard</span>
+                </a>
+                <a href="../product/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/baycafe-removebg-preview.png" width="50px" alt="">
+
+                    </div>
+                    <span>Products</span>
+                </a>
+                <a href="../people/index.html" class="menu-item active">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/hed3-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>People</span>
+                </a>
+                <a href="../settings/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/sitingsmall-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Setting</span>
+                </a>
+                <a href="../reports/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/pdfhigh-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Reports</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Stats Cards -->
+
+            <h2>Customer Management</h2>
+            <hr style="margin-top: 5px;margin-bottom: 30px;">
+            <!-- Charts and Products -->
+            <div class="card-container" style="min-height: 45vh;">
+                <div style="display: flex;justify-content: space-between;align-items: center;margin-bottom: 20px;">
+                    <div style="display: flex;align-items: center;gap: 5px;">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="input-field">
+                    </div>
+
+                    <div style="display: flex;align-items: center;gap: 5px;">
+                        <div class="btn-border-blue">
+                            <i class="fa-solid fa-fill"></i> Filter
+                        </div>
+                        <div class="btn-border-info">
+                            <i class="fa-solid fa-file-pdf"></i> PDF
+                        </div>
+                        <div class="btn-red">
+                            <i class="fa-solid fa-file-excel"></i> EXCEL
+                        </div>
+                        <div class="btn-info-blue ">
+                            <i class="fa-solid fa-file-import"></i> Import Customer
+                        </div>
+                        <div class="btn-info-yy">
+                            <i class="fa-solid fa-plus"></i> Create
+                        </div>
+                    </div>
+                </div>
+                <table class="table-only-bottom-border">
+                    <tr>
+                        <th align="start"><input type="checkbox"></th>
+                        <th align="start">Code</th>
+                        <th align="start">Name</th>
+                        <th align="start">Email</th>
+                        <th align="start">Tax Number</th>
+                        <th align="start">Total Sale Due</th>
+                        <th align="start">Total Sale Return Due</th>
+                        <th align="start">Action</th>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>C001</td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>TX123456</td>
+                        <td>$1,200.00</td>
+                        <td>$0.00</td>
+                        <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>C002</td>
+                        <td>Jane Smith</td>
+                        <td>jane@example.com</td>
+                        <td>TX654321</td>
+                        <td>$980.50</td>
+                        <td>$20.00</td>
+                        <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>C003</td>
+                        <td>Michael Brown</td>
+                        <td>michael@example.com</td>
+                        <td>TX112233</td>
+                        <td>$430.75</td>
+                        <td>$0.00</td>
+                        <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    </tr>
+
+                </table>
+            </div>
+            <!-- Footer -->
+            <div class="footer" style="margin-top: 50px;">
+                <div class="footer-title">Assignment Restaurant Manager</div>
+                <div>© 2025 Developed by Henq Runbaab • All rights reserved • v1.0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Toggle Script + Chart.js -->
+    <script>
+        document.getElementById('toggleSidebar').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('hidden');
+        });
+
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    data: [300, 500, 800, 1000, 400, 600, 550],
+                    borderColor: '#666',
+                    backgroundColor: 'transparent',
+                    borderWidth: 2,
+                    pointBackgroundColor: '#666',
+                    pointBorderColor: '#666',
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 1200,
+                        ticks: {
+                            stepSize: 200,
+                            callback: value => value + '$',
+                            color: '#666',
+                            font: { size: 11 }
+                        },
+                        grid: { color: '#f0f0f0', drawBorder: false }
+                    },
+                    x: {
+                        ticks: { color: '#666', font: { size: 11 } },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

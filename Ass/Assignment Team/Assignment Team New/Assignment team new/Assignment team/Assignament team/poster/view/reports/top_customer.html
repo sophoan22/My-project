@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Customer Report</title>
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Chart.js CDN -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../../assets/styles/layout.css">
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div style="display: flex; align-items: center;">
+            <a href="../dashboard/dashboard.html" class="logo">
+                <img src="../../assets/img/log.jpg" alt="" width="50px">
+            </a>
+        </div>
+
+        <div class="header-right">
+            <a class="btn-border-red" style="text-decoration: none; " href="../dashboard/dashboard.html">Dashboard</a>
+            <div class="notification-icon">
+                <img src="../../assets/img/bell-removebg-preview.png" alt="" width="20px">
+                <div class="notification-badge"></div>
+            </div>
+            <div class="user-avatar">
+                <i> <img src="../../assets/img/ha.jpg" alt="" width="30px"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-menu">
+                <a href="../dashboard/dashboard.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/pcdiagram-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Dashboard</span>
+                </a>
+                <a href="../product/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/baycafe-removebg-preview.png" width="50px" alt="">
+
+                    </div>
+                    <span>Products</span>
+                </a>
+                <a href="../people/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/hed3-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>People</span>
+                </a>
+                <a href="../settings/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/sitingsmall-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Setting</span>
+                </a>
+                <a href="../reports/index.html" class="menu-item active">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/pdfhigh-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Reports</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Stats Cards -->
+
+            <h2>Best Customer Report</h2>
+            <hr style="margin-top: 5px;margin-bottom: 30px;">
+            <!-- Charts and Products -->
+            <div class="card-container" style="min-height: 45vh;">
+                <div>
+                    <div style="margin-bottom: 15px;">
+                        <div style="display: flex;justify-content: center;">
+                            <input placeholder="2025-06-26 to 2025-06-29" style="width: 300px;" type="text"
+                                id="date-range" class="input-field">
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex;justify-content: space-between;align-items: center;margin-bottom: 20px;">
+                    <div style="display: flex;align-items: center;gap: 5px;">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="input-field">
+                    </div>
+
+                    <div style="display: flex;align-items: center;gap: 5px;">
+                        <div class="btn-border-info">
+                            <i class="fa-solid fa-file-pdf"></i> PDF
+                        </div>
+                    </div>
+                </div>
+                <table class="table-only-bottom-border">
+                    <tr>
+                        <th align="start">Name</th>
+                        <th align="start">Phone</th>
+                        <th align="start">Email</th>
+                        <th align="start">Total Sale</th>
+                        <th align="start">Total Amount</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            walk-in-customer
+                        </td>
+                        <td>09389237</td>
+                        <td>test@gmail.com</td>
+                        <td>1</td>
+                        <td>25.00</td>
+                    </tr>
+
+                </table>
+            </div>
+            <!-- Footer -->
+            <div class="footer" style="margin-top: 50px;">
+                <div class="footer-title">Assignment Restaurant Manager</div>
+                <div>© 2025 Developed by Henq Runbaab • All rights reserved • v1.0</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../../assets/styles/app.js"></script>
+    <script>
+        flatpickr("#date-range", {
+            mode: "range",
+            dateFormat: "Y-m-d", // Example: 2025-06-25 to 2025-06-30
+        });
+    </script>
+</body>
+
+</html>

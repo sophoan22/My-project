@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backup</title>
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Chart.js CDN -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../../assets/styles/layout.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div style="display: flex; align-items: center;">
+            <a href="../dashboard/dashboard.html" class="logo">
+                <img src="../../assets/img/log.jpg" alt="" width="50px">
+            </a>
+        </div>
+
+        <div class="header-right">
+            <a class="btn-border-red" style="text-decoration: none; " href="../dashboard/dashboard.html">Dashboard</a>
+            <div class="notification-icon">
+                <img src="../../assets/img/bell-removebg-preview.png" alt="" width="20px">
+                <div class="notification-badge"></div>
+            </div>
+            <div class="user-avatar">
+                <i> <img src="../../assets/img/ha.jpg" alt="" width="30px"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-menu">
+                <a href="../dashboard/dashboard.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/pcdiagram-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Dashboard</span>
+                </a>
+                <a href="../product/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/baycafe-removebg-preview.png" width="50px" alt="">
+
+                    </div>
+                    <span>Products</span>
+                </a>
+                <a href="../people/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/hed3-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>People</span>
+                </a>
+                <a href="../settings/index.html" class="menu-item active">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/sitingsmall-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Setting</span>
+                </a>
+                <a href="../reports/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/pdfhigh-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Reports</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Stats Cards -->
+
+            <h2>Backup</h2>
+            <hr style="margin-top: 5px;margin-bottom: 30px;">
+            <!-- Charts and Products -->
+            <div style="min-height: 55vh;">
+                <div class="card-container">
+                    <span
+                        style="background-color: rgba(205, 51, 51, 0.331);color: red;padding: 1px 4px; border-radius: 5px;">You
+                        will find
+                        you backup
+                        on <strong>/storage/app/public/backup</strong> and save
+                        it to your pc</span>
+                    <div style="text-align: end;">
+                        <button class="btn-info-yy" style="margin-top: 30px;">
+                            <i class="fa-solid fa-check"></i> Submit
+                        </button>
+                    </div>
+
+                    <table class="table-only-bottom-border">
+                        <tr>
+                            <th align="start">Date</th>
+                            <th align="start">File Size</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                backup-2025-03-01.sql
+                            </td>
+                            <td>0 bytes</td>
+                            <td style="color: red;" align="center"><i class="fa-regular fa-circle-xmark"></i></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer" style="margin-top: 50px;">
+                <div class="footer-title">Assignment Restaurant Manager</div>
+                <div>© 2025 Developed by Henq Runbaab • All rights reserved • v1.0</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Manager Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../../assets/styles/layout.css">
+    <link rel="stylesheet" href="../../assets/styles/pos.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div style="display: flex; align-items: center;">
+            <a href="../dashboard/dashboard.html" class="logo">
+                <img src="../../assets/img/log.jpg" alt="" width="50px">
+            </a>
+        </div>
+
+        <div class="header-right">
+            <a class="btn-border-red" style="text-decoration: none; " href="../dashboard/dashboard.html">Dashboard</a>
+            <div class="notification-icon">
+                <img src="../../assets/img/bell-removebg-preview.png" alt="" width="20px">
+                <div class="notification-badge"></div>
+            </div>
+            <div class="user-avatar">
+                <i> <img src="../../assets/img/ha.jpg" alt="" width="30px"></i>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding-top: 60px;gap: 30px;width: 100%;display: flex;">
+        <!-- Left Panel: Cart -->
+        <div class="left-panel">
+            <div style="display: flex;">
+                <input class="rounded" style="width: 100%;" type="text">
+                <img src="../../assets/img/kbal-removebg-preview.png" style="margin: 0 5px;" width="35" alt="">
+            </div>
+
+            <table class="table-header" style="margin-top: 15px;">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-body">
+                    <!-- Items go here -->
+                </tbody>
+            </table>
+            <div class="total" style="background-color: rgb(48, 196, 161);color: white;text-align: center;">Total
+                Payable: $<span id="total">0.00</span></div>
+
+            <div class="row my-4">
+                <div class="col-4">
+                    <p class="mb-1 small">Tax</p>
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" placeholder="0" aria-describedby="addon-wrapping">
+                        <span class="input-group-text" id="addon-wrapping">%</span>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <p class="mb-1 small">Discount</p>
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" placeholder="0" aria-describedby="addon-wrapping">
+                        <span class="input-group-text" id="addon-wrapping">$</span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <p class="mb-1 small">Shipping</p>
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" placeholder="0" aria-describedby="addon-wrapping">
+                        <span class="input-group-text" id="addon-wrapping">$</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="controls">
+                <button class="reset" onclick="resetCart()">Reset</button>
+                <button class="pay">Pay Now</button>
+                <button class="draft">Draft</button>
+            </div>
+        </div>
+
+        <!-- Right Panel: Products -->
+        <div class="right-panel ">
+            <div class="btn btn-outline-primary w-100" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight">
+                List of Category
+            </div>
+
+
+            <div class="my-3">
+                <input type="text" class="form-control bg-secondary" placeholder="Scan/Search product by code">
+            </div>
+
+            <div class="products justify-content-center" id="product-list">
+                <!-- Product cards go here -->
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 d-flex gap-2 justify-content-center">
+                    <div class="btn disabled btn-outline-secondary rounded-circle pagerRounded">
+                        < </div>
+
+                            <div class="btn btn-outline-danger rounded-circle pagerRounded">
+                                1
+                            </div>
+                            <div class="btn btn-outline-danger rounded-circle pagerRounded">
+                                2
+                            </div>
+                            <div class="btn btn-outline-danger rounded-circle pagerRounded">
+                                3
+                            </div>
+
+                            <div class="btn btn-outline-secondary rounded-circle pagerRounded">
+                                >
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header" style="justify-content: start;">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h5 id="offcanvasRightLabel" style="padding-left: 20px;">List of Category</h5>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <img src="../../assets/img/camea-removebg-preview.png" alt="">
+                            <p>All Category</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <img src="../../assets/img/camea-removebg-preview.png" alt="">
+                            <p>Fast Food</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="col-6">
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <img src="../../assets/img/camea-removebg-preview.png" alt="">
+                            <p>Hard Drink</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <img src="../../assets/img/camea-removebg-preview.png" alt="">
+                            <p>Soft Drink</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 d-flex gap-2 justify-content-center">
+                    <div class="btn disabled btn-outline-secondary rounded-circle pagerRounded">
+                        < </div>
+
+                            <div class="btn btn-outline-danger rounded-circle pagerRounded">
+                                1
+                            </div>
+                            <div class="btn btn-outline-danger rounded-circle pagerRounded">
+                                2
+                            </div>
+                            <div class="btn btn-outline-danger rounded-circle pagerRounded">
+                                3
+                            </div>
+
+                            <div class="btn btn-outline-secondary rounded-circle pagerRounded">
+                                >
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const products = [
+                { name: "Spaghetti", price: 128, image: "../../assets/img/tii.jpg" },
+                { name: "Coca Cola", price: 5, image: "../../assets/img/coca-removebg-preview.png" },
+                { name: "Milk", price: 23, image: "../../assets/img/meal.jpg" },
+                { name: "Steak", price: 250, image: "../../assets/img/steak.jpg" },
+                { name: "Burger", price: 25, image: "../../assets/img/burger.jpg" },
+                { name: "Cocktail", price: 28, image: "../../assets/img/cocktail.jpg" },
+            ];
+
+            // Only include the first 3 items in the cart by default
+            let cart = products.slice(0, 3).map(product => ({
+                ...product,
+                qty: 1,
+                subtotal: product.price,
+            }));
+
+            const productList = document.getElementById("product-list");
+            const cartBody = document.getElementById("cart-body");
+            const totalSpan = document.getElementById("total");
+
+            function renderProducts() {
+                products.forEach((product) => {
+                    const div = document.createElement("div");
+                    div.className = "product";
+                    div.innerHTML = `
+      <img src="${product.image}" alt="${product.name}" />
+      <div class="product-name">${product.name}</div>
+      <div class="product-price">$${product.price.toFixed(2)}</div>
+    `;
+                    // No onclick for adding to cart
+                    productList.appendChild(div);
+                });
+            }
+
+            function renderCart() {
+                cartBody.innerHTML = "";
+                let total = 0;
+                cart.forEach(item => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+      <td>${item.name}</td>
+      <td>$${item.price.toFixed(2)}</td>
+      <td>${item.qty}</td>
+      <td>$${item.subtotal.toFixed(2)}</td>
+    `;
+                    cartBody.appendChild(row);
+                    total += item.subtotal;
+                });
+                totalSpan.textContent = total.toFixed(2);
+            }
+
+            function resetCart() {
+                // Reset to the first 3 default items
+                cart = products.slice(0, 3).map(product => ({
+                    ...product,
+                    qty: 1,
+                    subtotal: product.price,
+                }));
+                renderCart();
+            }
+
+            renderProducts();
+            renderCart(); // Initial render of cart
+
+        </script>
+
+</body>
+
+</html>

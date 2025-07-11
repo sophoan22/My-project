@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POS Settings</title>
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Chart.js CDN -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../../assets/styles/layout.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div style="display: flex; align-items: center;">
+            <a href="../dashboard/dashboard.html" class="logo">
+                <img src="../../assets/img/log.jpg" alt="" width="50px">
+            </a>
+        </div>
+
+        <div class="header-right">
+            <a class="btn-border-red" style="text-decoration: none; " href="../dashboard/dashboard.html">Dashboard</a>
+            <div class="notification-icon">
+                <img src="../../assets/img/bell-removebg-preview.png" alt="" width="20px">
+                <div class="notification-badge"></div>
+            </div>
+            <div class="user-avatar">
+                <i> <img src="../../assets/img/ha.jpg" alt="" width="30px"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-menu">
+                <a href="../dashboard/dashboard.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/pcdiagram-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Dashboard</span>
+                </a>
+                <a href="../product/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/baycafe-removebg-preview.png" width="50px" alt="">
+
+                    </div>
+                    <span>Products</span>
+                </a>
+                <a href="../people/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/hed3-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>People</span>
+                </a>
+                <a href="../settings/index.html" class="menu-item active">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/sitingsmall-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Setting</span>
+                </a>
+                <a href="../reports/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/pdfhigh-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Reports</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h2>POS Settings</h2>
+            <hr style="margin-top: 5px;margin-bottom: 30px;">
+            <!-- Charts and Products -->
+            <div class="card-container">
+                <div>
+                    <div class="mbm">
+                        <label>Default Currency</label>
+                    </div>
+                    <input type="text" class="input-field" value="Thank for shopping with us. please come again.">
+                </div>
+                <div style="display: flex;justify-content: space-between;">
+                    <div>
+                        <div style="margin-top: 25px;">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label> Show Phone
+                        </div>
+                        <div style="margin-top: 25px;">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label> Show Customer
+                        </div>
+                        <div style="margin-top: 25px;">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label> Show Barcode
+                        </div>
+                    </div>
+                    <div>
+                        <div style="margin-top: 25px;">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label> Show Address
+                        </div>
+                        <div style="margin-top: 25px;">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label> Show Warehouse
+                        </div style="margin-top: 25px;">
+                        <div style="margin-top: 25px;">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label> Show Not to Customer
+                        </div>
+                    </div>
+
+                    <div>
+                        <div style="margin-top: 25px;">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label> Show Email
+                        </div>
+                        <div style="margin-top: 25px;">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label> Show Tax & Discount & Shopping
+                        </div>
+                        <div style="margin-top: 25px;">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label> Show Invoice Automatically
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-info-yy" style="margin-top: 30px;">
+                    <i class="fa-solid fa-check"></i> Submit
+                </button>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer" style="margin-top: 50px;">
+                <div class="footer-title">Assignment Restaurant Manager</div>
+                <div>© 2025 Developed by Henq Runbaab • All rights reserved • v1.0</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

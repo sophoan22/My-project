@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Chart.js CDN -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../../assets/styles/layout.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div style="display: flex; align-items: center;">
+            <a href="../dashboard/dashboard.html" class="logo">
+                <img src="../../assets/img/log.jpg" alt="" width="50px">
+            </a>
+            <div class="hamburger" id="toggleSidebar">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <a class="btn-border-red" href="../pos/index.html">POS</a>
+            <div class="notification-icon">
+                <img src="../../assets/img/bell-removebg-preview.png" alt="" width="20px">
+                <div class="notification-badge"></div>
+            </div>
+            <div class="user-avatar">
+                <i> <img src="../../assets/img/ha.jpg" alt="" width="30px"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-menu">
+                <a href="../dashboard/dashboard.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/pcdiagram-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Dashboard</span>
+                </a>
+                <a href="../product/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/baycafe-removebg-preview.png" width="50px" alt="">
+
+                    </div>
+                    <span>Products</span>
+                </a>
+                <a href="../people/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/hed3-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>People</span>
+                </a>
+                <a href="../settings/index.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/sitingsmall-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Setting</span>
+                </a>
+                <a href="#" class="menu-item active">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/pdfhigh-removebg-preview.png" alt="" width="50px">
+                    </div>
+                    <span>Reports</span>
+                </a>
+            </div>
+            <div class="product-side position-absolute"
+                style="position: absolute; top: 0;right: -180px;background-color: white;height: 100vh;width: 180px;border: 1px solid gray;padding-top: 65px;padding-left: 5px;padding-right: 5px;">
+                <a class="a-menu" href="sale.html">
+                    <span class="icon" style="padding-right: 5px;"><img width="25"
+                            src="../../assets/img/pdfhigh-removebg-preview.png" alt=""></span>
+                    Sale Report
+                </a>
+                <a class="a-menu" href="product.html">
+                    <span class="icon" style="padding-right: 5px;"><img width="25"
+                            src="../../assets/img/pdfhigh-removebg-preview.png" alt=""></span>
+                    Product Report
+                </a>
+                <a class="a-menu" href="customer.html">
+                    <span class="icon" style="padding-right: 5px;"><img width="25"
+                            src="../../assets/img/pdfclock-removebg-preview.png" alt=""></span>
+                    Customer Report
+                </a>
+                <a class="a-menu" href="top_selling.html">
+                    <span class="icon" style="padding-right: 5px;"><img width="25"
+                            src="../../assets/img/pdfdiagram-removebg-preview.png" alt=""></span>
+                    Top Selling
+                </a>
+                <a class="a-menu" href="top_customer.html">
+                    <span class="icon" style="padding-right: 5px;"><img width="25"
+                            src="../../assets/img/pfd_-removebg-preview.png" alt=""></span>
+                    Best Customer
+                </a>
+                <a class="a-menu" href="user.html">
+                    <span class="icon" style="padding-right: 5px;"><img width="25"
+                            src="../../assets/img/pdfclock-removebg-preview.png" alt=""></span>
+                    User Report
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Stats Cards -->
+            <div class="stats-grid" style="z-index: 1;">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <img src="../../assets/img/photo_2025-03-22_00-14-41-removebg-preview.png" alt="Sales Icon">
+                    </div>
+                    <div class="stat-info">
+                        <h3>Sales</h3>
+                        <div class="stat-value">$ 850.00</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <img src="../../assets/img/picminuy-removebg-preview.png" alt="Products Icon">
+                    </div>
+                    <div class="stat-info">
+                        <h3>Products</h3>
+                        <div class="stat-value">235</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <img src="../../assets/img/eroluyondai-removebg-preview.png" alt="Incomes Icon">
+                    </div>
+                    <div class="stat-info">
+                        <h3>Incomes</h3>
+                        <div class="stat-value">$ 2350.00</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Charts and Products -->
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <div class="chart-title">This Week Sales</div>
+                    <div class="chart-container">
+                        <canvas id="salesChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-title">Top Selling Product</div>
+                    <div class="product-item">
+                        <img src="../../assets/img/tii.jpg" alt="">
+                        <div class="product-info">
+                            <h4>Spaghetti Carbonara</h4>
+                            <div class="product-price">$250.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer-title">Assignment Restaurant Manager</div>
+                <div>© 2025 Developed by Henq Runbaab • All rights reserved • v1.0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Toggle Script + Chart.js -->
+    <script src="../../assets/styles/app.js">
+
+    </script>
+</body>
+
+</html>

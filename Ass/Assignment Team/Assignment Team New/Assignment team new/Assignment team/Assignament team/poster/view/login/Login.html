@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login</title>
+    
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(bagrr.jpg); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgba(rgba(0, 0, 0, 0.1), green, blue, alpha)
+        }
+        .login-form {
+            background-color: rgba(184, 181, 181, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(62, 53, 53, 0.1);
+            text-align: center;
+            height: 350px;
+            width: 400px;
+        }
+        .login-form h1 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            text-align: left;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+            margin-left: 6px;
+        }
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 70%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            border-color: #e12f2f;
+           
+        }
+        .login-form a {
+            display: block;
+            margin: 10px 0;
+            color: #007BFF;
+            text-decoration: none;
+           
+            
+        }
+        .login-form button {
+            background-color: #e12f2f;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;   
+             display: flex;
+             margin-top: 20px;
+             margin-bottom: 20px; 
+             justify-self: right;   
+        }
+        .logo img {
+            width: 100px;
+        }
+    </style>
+</head>
+<!-- using js -->
+<body> 
+    <div class="login-form"> 
+      <div class="logo"> 
+        <img src="log-removebg-preview.png" alt="" /> 
+      </div> 
+      <h1>Log in</h1> 
+      <form method="post"> 
+        <label for="username">Username: </label> 
+        <input type="text" id="username" name="username" /> <br /> 
+        <label for="password">Password : </label> 
+        <input type="password" id="password" name="password" /> <br /> 
+        <a href="forgot_password"><u>Forgot Password?</u></a> 
+        <button type="submit">Log in</button> 
+      </form> 
+    </div> 
+ 
+    <script> 
+      document.querySelector("form").addEventListener("submit", function (e) { 
+        e.preventDefault(); 
+        const username = document.getElementById("username").value; 
+        const password = document.getElementById("password").value; 
+ 
+        if (username === "" && password === "") { 
+          window.location.href = "../dashboard/dashboard.html"; 
+        } else { 
+          alert("Invalid username or password"); 
+        } 
+      }); 
+    </script> 
+  </body>
+
+</html>
